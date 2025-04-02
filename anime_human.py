@@ -30,7 +30,7 @@ def load_images_from_folder(folder_path, max_images, label, target_size=(64, 64)
         file_path = os.path.join(folder_path, filename)
         img = cv2.imread(file_path)
         if img is not None:
-            # Resize ảnh về kích thước 64x64
+            
             img_resized = cv2.resize(img, target_size)
             images.append(img_resized)
             labels.append(label)
@@ -43,7 +43,7 @@ def load_images_from_folder(folder_path, max_images, label, target_size=(64, 64)
 anime_path = "/content/drive/MyDrive/anime_human/anime"
 human_path = "/content/drive/MyDrive/anime_human/Human"
 
-# Load dữ liệu với số lượng yêu cầu và resize về 64x64
+
 x_anime, y_anime = load_images_from_folder(anime_path, max_images=1000, label=1)  # Anime = 1
 x_human, y_human = load_images_from_folder(human_path, max_images=500, label=0)   # Human = 0
 
@@ -128,7 +128,7 @@ import matplotlib.pyplot as plt
 from PIL import Image
 from io import BytesIO
 
-
+# add url
 image_url ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBDeqHMmyRrvywGRe_x6d-A-MUFHD-Z5k4J2RUKSSJapkrCgpX91p0omf7iKeLUruyarU&usqp=CAU"
 try:
 
